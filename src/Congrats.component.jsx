@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Congrats = props => {
   return props.success ? (
-    <div id="component-congrats">
+    <div id="component-congrats" className="alert alert-success">
       <span id="congrats-message">
         Congratulation!!! You guessed the right word.
       </span>
