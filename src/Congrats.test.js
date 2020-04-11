@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Congrats from "./Congrats.component";
-import { findById, checkProps } from "./test/testUtils";
+import { findById, checkProps } from "../test/testUtils";
 
 describe("Jotto", () => {
   const defaultProps = { success: false };
