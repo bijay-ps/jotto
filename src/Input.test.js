@@ -3,14 +3,12 @@ import { shallow } from "enzyme";
 import { findById, storeFactory } from "../test/testUtils";
 import Input from "./Input";
 
-const setUp = initialState => {
+const setUp = (initialState) => {
   const store = storeFactory(initialState);
   return shallow(<Input store={store} />)
     .dive()
     .dive();
 };
-
-setUp();
 
 describe("Render", () => {
   describe("Word has not been guessed", () => {
