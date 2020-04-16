@@ -6,7 +6,7 @@ import GuessedWords from "./GuessedWords.component";
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container" id="component-App">
         <h1>Jotto</h1>
         <Congrats success={true} />
         <GuessedWords
