@@ -1,5 +1,5 @@
 import moxios from "moxios";
-import getSecretWord from "./hookActions";
+import { getSecretWord } from "./hookActions";
 
 describe("moxios tests", () => {
   beforeEach(() => {
@@ -13,13 +13,13 @@ describe("moxios tests", () => {
   it("should call the getSecretWord callback on axios response", async () => {
     const secretWord = "party";
 
-    moxios.wait = () => {
+    moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
         response: secretWord
       });
-    };
+    });
 
     // create mock for callback arg
     const mockSetSecretWord = jest.fn();
