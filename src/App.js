@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import hookActions from './actions/hookActions';
 import Congrats from "./Congrats.component";
 import GuessedWords from "./GuessedWords.component";
 
@@ -22,6 +23,11 @@ const App = () => {
   )
 
   const setSecretWord = (secretWord) => dispatch({ type: 'setSecretWord', payload: secretWord })
+
+
+  React.useEffect(() => {
+    hookActions.getSecretWord(setSecretWord)
+  }, [])
   return (
     <div className="container" id="component-App">
       <h1>Jotto</h1>
